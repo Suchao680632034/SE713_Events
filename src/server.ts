@@ -1,6 +1,7 @@
 import express from 'express'
 import type { Request, Response } from 'express'
 const app = express()
+app.use(express.json());
 const port = 3000
 
  interface Event {
@@ -74,12 +75,6 @@ const events: Event[] = [
 
 ]
 
-
-
-app.get('/', (req: Request, res: Response) => {
-  res.send('Hello World!')
-})
-
 app.listen(port, () => {
   console.log(`App listening at http://localhost:${port}`)
 })
@@ -109,5 +104,13 @@ app.get('/test', (req: Request, res: Response) => {
     res.status(404).send("Event not found");
     }
 });  
+
+ app.post("/events", (req, res) => {
+    const newEvent: Event = req.body;
+    newEvent.id = events.length + 1;
+    events.push(newEvent);
+    res.json(newEvent);
+});
+
 
 
