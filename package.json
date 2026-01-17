@@ -1,0 +1,29 @@
+{
+  "name": "se713_events",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+ "scripts": {
+ "start": "node dist/index.js",
+ "build": "tsc",
+ "dev": "ts-node src/index.ts"
+}
+,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Suchao680632034/SE713_Events.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Suchao680632034/SE713_Events/issues"
+  },
+  "homepage": "https://github.com/Suchao680632034/SE713_Events#readme",
+  "devDependencies": {
+    "@types/node": "^25.0.9",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}
