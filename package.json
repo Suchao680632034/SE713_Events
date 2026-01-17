@@ -3,12 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
- "scripts": {
- "start": "node dist/index.js",
- "build": "tsc",
- "dev": "ts-node src/index.ts"
-}
-,
+  "scripts": {
+    "start": "node dist/index.js",
+    "build": "tsc",
+    "dev": "ts-node src/server.ts"
+
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Suchao680632034/SE713_Events.git"
@@ -16,14 +16,18 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "bugs": {
     "url": "https://github.com/Suchao680632034/SE713_Events/issues"
   },
   "homepage": "https://github.com/Suchao680632034/SE713_Events#readme",
   "devDependencies": {
+    "@types/express": "^5.0.6",
     "@types/node": "^25.0.9",
-    "ts-node": "^10.9.2",
+    "ts-node": "^1.7.1",
     "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
   }
 }
