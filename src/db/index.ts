@@ -7,7 +7,7 @@ const pool = new Pool({
    password: 'admin123',
    host: 'localhost',
    port: 5432,
-   database: 'mydatabase'
+   database: 'events'
 })
 type QueryParam = string | number | boolean | Date | null | undefined;
 export const query = (text: string, params?: QueryParam[]): Promise<QueryResult<any>> => {
