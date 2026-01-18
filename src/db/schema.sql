@@ -1,5 +1,5 @@
 CREATE TABLE events (
-    id INT PRIMARY KEY,
+   id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     category VARCHAR(255),
     title VARCHAR(255),
     description TEXT,
@@ -8,5 +8,4 @@ CREATE TABLE events (
     time TIME,
     petsAllowed BOOLEAN,
     organizer VARCHAR(255)
-
 );
