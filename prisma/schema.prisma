@@ -11,9 +11,7 @@ generator client {
 
 datasource db {
   provider = "postgresql"
-  url      = env("DATABASE_URL")
 }
-
 
 
  model event {
@@ -27,3 +25,4 @@ datasource db {
   petsAllowed Boolean
   organizer   String
 }
+

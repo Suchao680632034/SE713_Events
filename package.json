@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.js",
   "type": "module",
-
   "scripts": {
     "start": "node dist/index.js",
     "build": "tsc",
@@ -17,7 +16,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "module",
   "bugs": {
     "url": "https://github.com/Suchao680632034/SE713_Events/issues"
   },
@@ -27,13 +25,12 @@
     "@types/node": "^25.0.9",
     "@types/pg": "^8.16.0",
     "nodemon": "^3.1.11",
-    "prisma": "^6.19.2",
+    "prisma": "^7.2.0",
     "ts-node": "^1.7.1",
     "tsx": "^4.21.0",
     "typescript": "^5.9.3"
   },
   "dependencies": {
-    "@prisma/adapter-pg": "^7.2.0",
     "@prisma/client": "^7.2.0",
     "dotenv": "^17.2.3",
     "express": "^5.2.1",
