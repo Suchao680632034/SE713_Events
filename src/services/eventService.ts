@@ -1,22 +1,22 @@
-import {Event} from "../models/event";
+import {eventModel as Event} from "../generated/prisma/models/event";
 //import { getAllEvents as allEvents , getEventByCategory as eventByCategory , getEventById as eventById , addEvent as addNewEvent } from "../repositories/eventRepository";
-import * as repo from "../repositories/eventRepositoryDB";
+import * as repo from "../repositories/eventRepositoryPrisma";
 
-export async function getEventByCategory(category: string): Promise<Event[]> {
+export async function getEventByCategory(category: string) {
   return repo.getEventByCategory(category);
 }
 
-export async function getAllEvents(): Promise<Event[]> {
+export async function getAllEvents(){
    return repo.getAllEvents();
 }
 
 
-export async function getEventById(id: number): Promise<Event | undefined> {
+export async function getEventById(id: number) {
     return repo.getEventById(id);
 }   
 
 
-export function addEvent(newEvent: Event): Promise<Event> {
+export function addEvent(newEvent: Event){
    return repo.addEvent(newEvent);
    
 }
