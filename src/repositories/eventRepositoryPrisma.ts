@@ -27,7 +27,7 @@ export function addEvent(newEvent: Event){
         date: newEvent.date,
         time: newEvent.time,
         petsAllowed: newEvent.petsAllowed,
-        organizer: newEvent.organizer
+       // organizer: newEvent.organizer
       }
   });
 }
