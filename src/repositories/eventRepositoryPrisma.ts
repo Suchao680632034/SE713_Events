@@ -34,24 +34,27 @@ export function addEvent(newEvent: Event){
 
 export function getAllEventsWithOrganizer() {
   return prisma.event.findMany({
-    include: {
-      organizer: true,
-    },
-    omit: { 
-        organizerId: true
-
-    },
+    select: {
+        id: true,
+        category: true,
+        organizerId:false,
+        organizer: {
+            select: {
+               name: true,
+            }
+        }
+    }
   });
 }
-
+//ทดลองแก้ไขส่วนของ findEventByIdWithOrganizer ให้แสดง ชื่อ เวลา และ organizer id เท่านั้น
 export function getEventByIdWithOrganizer(id: number) {
   return prisma.event.findUnique({
     where: { id },
-    include: {
-        organizer: true,
-    },
-    omit: { 
-        organizerId: true
-    },
+    select: {
+        id: true,
+        title: true,
+        time: true,
+        organizerId: true,
+    }
   });
 }
