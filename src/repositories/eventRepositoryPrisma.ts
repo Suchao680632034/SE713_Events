@@ -31,3 +31,27 @@ export function addEvent(newEvent: Event){
       }
   });
 }
+
+export function getAllEventsWithOrganizer() {
+  return prisma.event.findMany({
+    include: {
+      organizer: true,
+    },
+    omit: { 
+        organizerId: true
+
+    },
+  });
+}
+
+export function getEventByIdWithOrganizer(id: number) {
+  return prisma.event.findUnique({
+    where: { id },
+    include: {
+        organizer: true,
+    },
+    omit: { 
+        organizerId: true
+    },
+  });
+}

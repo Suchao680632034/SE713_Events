@@ -7,12 +7,12 @@ export async function getEventByCategory(category: string) {
 }
 
 export async function getAllEvents(){
-   return repo.getAllEvents();
+   return repo.getAllEventsWithOrganizer();
 }
 
 
 export async function getEventById(id: number) {
-    return repo.getEventById(id);
+    return repo.getEventByIdWithOrganizer(id);
 }   
 
 
