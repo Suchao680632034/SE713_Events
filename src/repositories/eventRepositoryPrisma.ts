@@ -42,7 +42,14 @@ export function getAllEventsWithOrganizer() {
             select: {
                name: true,
             }
-        }
+        },participants: {
+            select: {
+                id: true,
+                name: true,
+                email: true,
+                events:true,
+            }
+        },
     }
   });
 }
