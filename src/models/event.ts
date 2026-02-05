@@ -1,4 +1,4 @@
- export interface Event {
+export interface Event {
   id: number;
   category: string;
   title: string;
@@ -7,5 +7,5 @@
   date: string;
   time: string;
   petsAllowed: boolean;
-  organizer: string;
+  organizerId: number;
 }
