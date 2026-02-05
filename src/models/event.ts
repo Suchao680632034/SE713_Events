@@ -7,5 +7,5 @@ export interface Event {
   date: string;
   time: string;
   petsAllowed: boolean;
-  organizerId: number;
+ // organizerId: number;
 }
