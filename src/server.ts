@@ -17,7 +17,7 @@ app.get('/test', (req: Request, res: Response) => {
     res.send(output);
   })
 
- app.get("/events", async (req, res) => {
+app.get("/events", async (req, res) => {
     if (req.query.category) {
     const category = req.query.category;
     const filteredEvents = await getEventByCategory(category as string);
@@ -27,7 +27,7 @@ app.get('/test', (req: Request, res: Response) => {
     }
 });
 
- app.get("/events/:id", async(req, res) => {
+app.get("/events/:id", async(req, res) => {
     const id = parseInt(req.params.id);
     const event =await getEventById(id);
     if (event) {
@@ -37,7 +37,7 @@ app.get('/test', (req: Request, res: Response) => {
     }
 });  
 
- app.post("/events", async (req, res) => {
+app.post("/events", async (req, res) => {
     const newEvent: Event = req.body;
     await addEvent(newEvent);
     res.json(newEvent);
